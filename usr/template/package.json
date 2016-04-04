@@ -12,10 +12,6 @@
     "bower": "^1.7.7",
     "express": "^4.13.4",
     "mysql": "^2.10.2",
-    "phantomjs-prebuilt": "^2.1.7",
-    "time-grunt": "^1.0.0"
-  },
-  "nonsense": {
     "grunt": "^0.4.5",
     "grunt-angular-templates": "^0.5.7",
     "grunt-concurrent": "^1.0.0",
@@ -44,7 +40,9 @@
     "jshint-stylish": "^1.0.0",
     "karma": "^0.13.22",
     "karma-jasmine": "^0.3.8",
-    "karma-phantomjs-launcher": "^1.0.0"
+    "karma-phantomjs-launcher": "^1.0.0",
+    "phantomjs-prebuilt": "^2.1.7",
+    "time-grunt": "^1.0.0"
   },
   "author": "42Six"
 }

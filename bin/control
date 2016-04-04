@@ -31,7 +31,11 @@ function build() {
     rm -rf ${TMP}node_modules
   fi
   npm prune
-  npm i
+  npm install
+  OLD_HOME=$HOME
+  HOME=$OPENSHIFT_DATA_DIR
+  bower install
+  HOME=$OLD_HOME
   cd ${INIT_DIR}
   client_result 'Node.js modules installed.'
 }
