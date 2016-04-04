@@ -3,6 +3,7 @@
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
 source $HOME/nodejs/lib/util
 
+NPM_CONFIG_PREFIX = ${OPENSHIFT_DATA_DIR}.npm-global/
 # Add environment variables
 echo production                                > env/NODE_ENV
 echo ${OPENSHIFT_NODEJS_IP}                    > env/NODE_IP
@@ -13,8 +14,8 @@ echo ${OPENSHIFT_DATA_DIR}.nodejs/.npmrc       > env/npm_config_userconfig
 echo ${OPENSHIFT_DATA_DIR}.nodejs/.npmignore   > env/npm_config_userignorefile
 echo ${OPENSHIFT_DATA_DIR}.nodejs/.npm-init.js > env/npm_config_init_module
 echo ${TMP}                                    > env/npm_config_tmp
-echo "~/.npm-global"                           > env/NPM_CONFIG_PREFIX
-echo "~/.npm-global/bin:${OPENSHIFT_NODEJS_PATH_ELEMENT}" > env/OPENSHIFT_NODEJS_PATH_ELEMENT
+echo ${NPM_CONFIG_PREFIX}                      > env/NPM_CONFIG_PREFIX
+echo ${NPM_COMFIG_PREFIX}bin:${OPENSHIFT_NODEJS_PATH_ELEMENT} > env/OPENSHIFT_NODEJS_PATH_ELEMENT
 
 update_nodejs
 client_result "Node.js $(node --version) and NPM $(npm --version) installed."
