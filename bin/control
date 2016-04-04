@@ -30,8 +30,8 @@ function build() {
     cp -pRf ${TMP}node_modules ./
     rm -rf ${TMP}node_modules
   fi
-  npm prune --production
-  npm i --production
+  npm prune
+  npm i
   cd ${INIT_DIR}
   client_result 'Node.js modules installed.'
 }

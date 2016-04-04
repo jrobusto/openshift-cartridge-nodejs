@@ -15,5 +15,8 @@ echo ${OPENSHIFT_DATA_DIR}.nodejs/.npm-init.js > env/npm_config_init_module
 echo ${TMP}                                    > env/npm_config_tmp
 
 update_nodejs
-
+echo "~/.npm global"                           > env/NPM_CONFIG_PREFIX
+echo "~/.npm-global/bin"                       > env/OPENSHIFT_NODEJS_PATH_ELEMENT
 client_result "Node.js $(node --version) and NPM $(npm --version) installed."
+
+npm install -g supervisor
