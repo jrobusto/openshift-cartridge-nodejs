@@ -15,7 +15,7 @@ echo ${OPENSHIFT_DATA_DIR}.nodejs/.npmignore   > env/npm_config_userignorefile
 echo ${OPENSHIFT_DATA_DIR}.nodejs/.npm-init.js > env/npm_config_init_module
 echo ${TMP}                                    > env/npm_config_tmp
 echo ${NPM_CONFIG_PREFIX}                      > env/NPM_CONFIG_PREFIX
-echo ${NPM_COMFIG_PREFIX}bin:${OPENSHIFT_NODEJS_PATH_ELEMENT} > env/OPENSHIFT_NODEJS_PATH_ELEMENT
+echo ${NPM_CONFIG_PREFIX}bin:${OPENSHIFT_NODEJS_PATH_ELEMENT} > env/OPENSHIFT_NODEJS_PATH_ELEMENT
 
 update_nodejs
 client_result "Node.js $(node --version) and NPM $(npm --version) installed."
