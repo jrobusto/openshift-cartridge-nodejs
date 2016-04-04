@@ -36,6 +36,7 @@ function build() {
   HOME=$OPENSHIFT_DATA_DIR
   bower install
   HOME=$OLD_HOME
+  grunt build
   cd ${INIT_DIR}
   client_result 'Node.js modules installed.'
 }
