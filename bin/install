@@ -3,7 +3,7 @@
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
 source $HOME/nodejs/lib/util
 
-NPM_CONFIG_PREFIX = ${OPENSHIFT_DATA_DIR}.npm-global/
+NPM_CONFIG_PREFIX=${OPENSHIFT_DATA_DIR}.npm-global/
 # Add environment variables
 echo production                                > env/NODE_ENV
 echo ${OPENSHIFT_NODEJS_IP}                    > env/NODE_IP
